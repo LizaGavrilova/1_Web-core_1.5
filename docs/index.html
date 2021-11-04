@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header__wrapper">
+            <div class="header__text">
+                <a href="#">
+                    Ремонт техники различных брендов
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main__wrapper">
+            <!-- Блок для мобильной версси под swiper -->
+            <div class="swiper mySwiper">
+                <ul class="main__brands-list_swiper swiper-wrapper">
+
+                </ul>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Блок бeз swiper -->
+            <div class="main__brands">
+                <ul class="main__brands-list">
+
+                </ul>
+
+                <a class="main__button main__button_expand" href="#">
+                    <img class="button__icon" src="img/expand.svg" alt="">
+                    <img class="button__icon-back" src="img/back.svg" alt="">                 
+                    <p class="button__text">
+                        Показать все
+                    </p>
+                </a>
+            </div>           
+
+        </div>
+    </div>
+
+    <!-- Шаблон для мобильной версии с swiper -->
+    <template id="brand-template_swiper-slide" class="main__brand_swiper-slide">
+        <li class="brand-item_swiper swiper-slide">
+            <a href="#" class="swiper-content">
+                <img class="main__brand_logo" src="" alt="">
+                <img class="main__brand_go" src="img/go.svg" alt="">
+            </a>                
+        </li>
+    </template>
+    
+    <!-- Шаблон без swiper -->
+    <template id="brand-template" class="main__brand">
+        <li class="brand-item">
+            <a href="#">
+                <img class="main__brand_logo" src="" alt="">
+                <img class="main__brand_go" src="img/go.svg" alt="">
+            </a>           
+        </li>
+    </template>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable:true,
+            },
+            slidesPerView: 'auto',
+            spaceBetween: 24
+        });    
+      </script>
+</body>
+</html>

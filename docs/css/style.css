@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('../fonts/TTLakes-DemiBold.eot');
+    src: url('../fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakes-Regular.woff') format('woff'),
+    url('../fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Lakes Condensed Medium';
+    src: url('../fonts/TTLakesCondensed-Medium.eot');
+    src: url('../fonts/TTLakesCondensed-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/TTLakesCondensed-Medium.woff') format('woff'),
+    url('../fonts/TTLakesCondensed-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    max-width: 1440px;
+    background: #F8F8F8;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.header__wrapper {
+    background-image: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+    border-top: 1px solid #D9FFF5;
+    min-width: 320px;
+    height: 80px;
+}
+.header__text {
+    margin: 16px;
+}
+.header__text a {
+    font-family: 'TT Lakes Regular', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7E7E82;
+}
+
+.main__wrapper {
+    margin: 0px 16px;
+}
+.main__brands-list_swiper {  
+    padding: 0;
+}
+.brand-item_swiper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px !important;
+    min-height: 72px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-bottom: 12px; 
+}
+.brand-item_swiper .swiper-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px !important;
+}
+.swiper-slide {
+    width: auto;
+}
+.swiper-pagination {
+    bottom: 0px !important;
+}
+
+.main__brand_logo{
+    margin-left: 16px;
+}
+.main__brand_go {
+    margin-right: 16px;
+}
+.main__button, .main__brands {
+    display: none;
+}
+.button__icon-back {
+    display: none;
+}
+@media (min-width: 768px) {
+    body {
+        min-width: 768px;
+    }
+    .header__text {
+        margin-left: 24px;
+    }
+    .header__wrapper {
+        min-width: 768px;
+        height: 56px;
+    }
+    .main__wrapper {
+        margin: 24px;
+    }
+    .mySwiper {
+        display: none;
+    }
+    .main__brands-list {
+        padding: 0;
+    }
+    .main__brands {
+        display: flex;
+        flex-direction: column;
+    }
+    .main__brands-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;      
+        padding: 0;
+        margin: 0;
+    }
+    .brand-item a {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; 
+        width: 224px !important;
+        min-height: 72px;
+        background: #FFFFFF;
+        border: 1px solid #EAEAEA;
+        box-sizing: border-box;
+        border-radius: 6px;      
+    }
+    .main__button {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 24px 0 0 0;
+    }
+    .button__text {
+        font-family: 'TT Lakes Condensed Medium', serif;
+        font-size: 16px;
+        letter-spacing: -0.2px;
+        line-height: 24px;
+        color: #1B1C21;
+        margin: 0;
+    }
+}
+@media (min-width: 1120px) {
+    body {
+        min-width: 1120px;
+    }
+    .header__wrapper {
+        min-width: 1120px;
+        height: 56px;
+    }
+    .header__text {
+        margin-left: 32px;
+    }
+    .main__wrapper {
+        margin: 24px 32px;
+    }
+    .main__brands-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    } 
+}
